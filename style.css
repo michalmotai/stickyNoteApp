@@ -1,0 +1,158 @@
+body{
+    background-image: url(source/square.png);    
+}
+
+
+h1{
+    text-align: center;
+    font-size: 40px;
+    font-family: 'Permanent Marker', cursive;
+    font-weight: 700;
+    margin-top: 50px;
+    margin-bottom: 50px;  
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+ 
+
+#stickiesDiv{
+    
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: flex-start;
+    justify-items: flex-start;
+}
+
+div.note{
+    justify-content:center ;
+    background: rgb(142,231,249);
+    background-image: url(source/noteBackground2.png);
+    border-radius: 5px;
+    width: 300px;
+    min-height: 300px;
+    position: relative;
+    font-family: 'Permanent Marker', cursive;
+    filter: drop-shadow(3px 3px 6px rgb(155, 154, 154));
+    transform: 1s;
+    background-blend-mode: multiply;
+    background-size: cover;
+}
+
+div.note:last-child{
+    animation-name: myAnimation;
+    animation-duration: 1s;
+    animation-play-state: running;
+    animation-fill-mode: forwards;
+    animation-play-state:initial
+}
+
+@keyframes myAnimation {
+    0% {opacity: 0; 
+        width:0%; 
+        height: 0%;}
+    
+    100% {opacity: 1;
+         
+        }
+ }
+
+.submitButtons{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+    gap: 20px;
+}
+
+
+.note:hover{
+    opacity: 0.8 ;
+
+}
+
+.formInputDiv{
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 800px;
+    justify-content: center;
+    align-items: center;
+    margin:auto;
+    font-family: 'Permanent Marker', cursive;
+    background-image: url(source/line.png);
+    background-color: rgb(250, 250, 221);
+    padding:30px;
+    border-radius: 5px;
+    filter: drop-shadow(3px 3px 6px rgb(97, 96, 96));
+    gap: 20px;
+    rotate: -1deg;
+}
+
+.formInputDiv>child {
+    flex-basis: 2 1 1;
+
+}
+
+textarea{
+    resize: none;
+    overflow-y: auto;
+}
+
+
+.textAreaSticky{
+    position: absolute;
+    top: 40px;
+    height: 180px;
+    width: 100%;
+    padding: 20px;
+    background-color: inherit;
+    
+    border: 0px;
+    border-radius: 10px;
+    font-size: 20px;
+    
+}
+
+.deleteNoteBtn{
+    
+    background-color:inherit;
+    position: absolute;
+    top: 5%;
+    right: 5%;
+    border: 0px;
+    opacity: 0;
+    transition: 0.1s;
+}
+
+.note:hover button{
+    opacity: 1;
+}
+
+.dateAndTime{
+    position: absolute;
+    width: 100%;
+    bottom: 0%;
+    height: 30%;
+    font-size: 20px;
+    padding: 15px;
+    color: white;
+}
+
+.id{
+    display: none;
+}
+
+svg{
+    width:20px;
+    height:20px;
+    color:white;
+    /* rotate: 5deg; */
+}
+
+.form-control{
+    background-color: inherit;
+    min-width: 100px;
+    
+}
+
+
